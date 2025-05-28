@@ -1,14 +1,13 @@
 CPP = c++
 COMPILE_FLAGS = -Wall -Wextra -Werror -pedantic -Wshadow -std=c++98 -g -O0
-NAME = Animal
+NAME = Brain
 
 SRCS = \
 	main.cpp \
 	Animal.cpp \
 	Cat.cpp \
 	Dog.cpp \
-	WrongAnimal.cpp \
-	WrongCat.cpp
+	Brain.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 

@@ -2,6 +2,8 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 using std::cout;
 using std::endl;
@@ -34,6 +36,7 @@ static int wrong() {
 
 int main() {
 	correct();
+	cout << "------------------------" << endl;
 	wrong();
 	return 0;
 }
