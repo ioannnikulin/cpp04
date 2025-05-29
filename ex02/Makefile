@@ -1,5 +1,6 @@
 CPP = c++
 COMPILE_FLAGS = -Wall -Wextra -Werror -pedantic -Wshadow -std=c++98 -g -O0
+LINK_FLAGS =
 NAME = Abstract
 
 SRCS = \
@@ -11,8 +12,11 @@ SRCS = \
 
 OBJS = $(SRCS:.cpp=.o)
 
+$(OBJS): %.o: %.cpp
+	$(CPP) $(COMPILE_FLAGS) -c $< -o $@
+
 $(NAME): $(OBJS)
-	$(CPP) $(COMPILE_FLAGS) $(OBJS) -o $(NAME)
+	$(CPP) $(LINK_FLAGS) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 

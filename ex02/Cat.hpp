@@ -17,7 +17,7 @@ private:
 public:
 	Cat();
 	~Cat();
-	void makeSound() const override;
-	void think() const override;
+	void makeSound() const;
+	void think() const;
 };
 #endif

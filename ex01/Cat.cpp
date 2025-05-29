@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 #include "Cat.hpp"
 
@@ -33,7 +34,7 @@ Cat::~Cat() {
 	cout << "Cat destructor called" << endl;
 #endif
 	delete _brain;
-	_brain = nullptr;
+	_brain = NULL;
 }
 
 Cat& Cat::operator=(const Cat& other) {

@@ -1,4 +1,5 @@
 *.o
+.vscode
 ex00/Animal
 ex01/Brain
 ex02/Abstract

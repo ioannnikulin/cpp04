@@ -2,8 +2,8 @@
 
 #include "Ice.hpp"
 
-#define CONSTRUCTOR_SELFPRESENT
-#define DESTRUCTOR_SELFPRESENT
+// #define CONSTRUCTOR_SELFPRESENT
+// #define DESTRUCTOR_SELFPRESENT
 
 using std::cout;
 using std::endl;

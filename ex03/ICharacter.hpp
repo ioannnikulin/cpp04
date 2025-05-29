@@ -3,13 +3,19 @@
 
 #include <iostream>
 
+#include "AMateria.hpp"
+
 using std::string;
+
+class AMateria;
 
 class ICharacter {
 private:
-	ICharacter();
 	ICharacter(const ICharacter& other);
 	ICharacter& operator=(const ICharacter& other);
+
+protected:
+	ICharacter();
 
 public:
 	virtual ~ICharacter();

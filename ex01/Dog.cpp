@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdlib.h>
 
 #include "Dog.hpp"
 
@@ -33,7 +34,7 @@ Dog::~Dog() {
 	cout << "Dog destructor called" << endl;
 #endif
 	delete _brain;
-	_brain = nullptr;
+	_brain = NULL;
 }
 
 Dog& Dog::operator=(const Dog& other) {

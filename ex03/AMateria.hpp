@@ -7,6 +7,8 @@
 
 using std::string;
 
+class ICharacter;
+
 class AMateria {
 private:
 	AMateria(const AMateria& other);

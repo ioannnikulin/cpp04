@@ -1,5 +1,6 @@
 CPP = c++
 COMPILE_FLAGS = -Wall -Wextra -Werror -pedantic -Wshadow -std=c++98 -g -O0
+LINK_FLAGS = 
 NAME = AMateria
 
 SRCS = \
@@ -9,12 +10,16 @@ SRCS = \
 	Cure.cpp \
 	ICharacter.cpp \
 	Character.cpp \
-	MateriaSource.cpp
+	IMateriaSource.cpp \
+	MateriaSource.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
 
+$(OBJS): %.o: %.cpp
+	$(CPP) $(COMPILE_FLAGS) -c $< -o $@
+
 $(NAME): $(OBJS)
-	$(CPP) $(COMPILE_FLAGS) $(OBJS) -o $(NAME)
+	$(CPP) $(LINK_FLAGS) $(OBJS) -o $(NAME)
 
 all: $(NAME)
 

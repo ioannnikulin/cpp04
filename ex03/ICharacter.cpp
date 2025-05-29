@@ -1,72 +1,33 @@
 #include <iostream>
 
-#include "Brain.hpp"
+#include "ICharacter.hpp"
 
 using std::cout;
 using std::endl;
 
-#define CONSTRUCTOR_SELFPRESENT
-#define DESTRUCTOR_SELFPRESENT
+// #define CONSTRUCTOR_SELFPRESENT
+// #define DESTRUCTOR_SELFPRESENT
 
-const string Brain::_verbs[] = {
-	"eat"
-	, "chase"
-	, "fetch"
-	, "chew"
-	, "hide"
-	, "dig up"
-	, "sniff"
-	, "love"
-	, "dream of"
-	, "stare at"
-};
-
-const string Brain::_objects[] = {
-	"bone"
-	, "ball"
-	, "stick"
-	, "toy"
-	, "my human"
-	, "food"
-	, "grass"
-	, "tree"
-	, "postman"
-	, "neighbor"
-};
-
-Brain::Brain() {
+ICharacter::ICharacter() {
 #ifdef CONSTRUCTOR_SELFPRESENT
-	cout << "Brain default constructor called" << endl;
+	cout << "ICharacter default constructor called" << endl;
 #endif
-	for (int i = 0; i < IDEAS_QTTY; ++i) {
-		_ideas[i] = _verbs[rand() % VERBS_QTTY] + " " + _objects[rand() % OBJECTS_QTTY];
-	}
 }
 
-Brain::Brain(const Brain& other) {
+ICharacter::ICharacter(const ICharacter& other) {
 #ifdef CONSTRUCTOR_SELFPRESENT
-	cout << "Brain copy constructor called" << endl;
+	cout << "ICharacter copy constructor called" << endl;
 #endif
-	for (int i = 0; i < IDEAS_QTTY; ++i) {
-		_ideas[i] = other._ideas[i];
-	}
+	(void)other;
 }
 
-Brain::~Brain() {
+ICharacter::~ICharacter() {
 #ifdef DESTRUCTOR_SELFPRESENT
-	cout << "Brain destructor called" << endl;
+	cout << "ICharacter destructor called" << endl;
 #endif
 }
 
-Brain& Brain::operator=(const Brain& other) {
-	if (this != &other) {
-		for (int i = 0; i < IDEAS_QTTY; ++i) {
-			_ideas[i] = other._ideas[i];
-		}
-	}
+ICharacter& ICharacter::operator=(const ICharacter& other) {
+	(void)other;
 	return *this;
-}
-
-void Brain::think() const {
-	cout << _ideas[rand() % IDEAS_QTTY] << endl;
 }

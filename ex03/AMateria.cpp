@@ -5,8 +5,8 @@
 using std::cout;
 using std::endl;
 
-#define CONSTRUCTOR_SELFPRESENT
-#define DESTRUCTOR_SELFPRESENT
+// #define CONSTRUCTOR_SELFPRESENT
+// #define DESTRUCTOR_SELFPRESENT
 
 AMateria::AMateria():
 	_type("AMateria")
