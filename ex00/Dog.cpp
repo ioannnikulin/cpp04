@@ -41,6 +41,5 @@ Dog& Dog::operator=(const Dog& other) {
 }
 
 void Dog::makeSound() const {
-	srand(time(0));
 	cout << sounds[rand() % SOUND_SZ] << endl;
 }

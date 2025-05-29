@@ -41,6 +41,5 @@ Cat& Cat::operator=(const Cat& other) {
 }
 
 void Cat::makeSound() const {
-	srand(time(0));
 	cout << sounds[rand() % SOUND_SZ] << endl;
 }

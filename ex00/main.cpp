@@ -1,4 +1,6 @@
 #include <iostream>
+#include <stdlib.h>
+
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -35,6 +37,7 @@ static int wrong() {
 }
 
 int main() {
+	srand(time(0));
 	correct();
 	cout << "------------------------" << endl;
 	wrong();
