@@ -27,7 +27,7 @@ static int wrong() {
 	const WrongAnimal* meta = new WrongAnimal();
 	const WrongAnimal* i = new WrongCat();
 	cout << i->getType() << " " << endl;
-	i->makeSound(); // will output the dog sound!
+	i->makeSound();
 	meta->makeSound();
 	delete meta;
 	delete i;
