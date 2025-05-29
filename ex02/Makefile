@@ -12,7 +12,7 @@ SRCS = \
 
 OBJS = $(SRCS:.cpp=.o)
 
-$(OBJS): %.o: %.cpp
+%.o: %.cpp
 	$(CPP) $(COMPILE_FLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
