@@ -23,7 +23,8 @@ Character::Character() :
 }
 
 Character::Character(const Character& other) :
-	_name(other._name)
+	ICharacter()
+	, _name(other._name)
 {
 #ifdef CONSTRUCTOR_SELFPRESENT
 	cout << "Character copy constructor called" << endl;

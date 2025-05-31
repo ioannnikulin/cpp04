@@ -17,7 +17,9 @@ MateriaSource::MateriaSource() {
 	}
 }
 
-MateriaSource::MateriaSource(const MateriaSource& other) {
+MateriaSource::MateriaSource(const MateriaSource& other) :
+	IMateriaSource()
+{
 #ifdef CONSTRUCTOR_SELFPRESENT
 	cout << "MateriaSource copy constructor called" << endl;
 #endif
